@@ -1,5 +1,6 @@
 import {Component, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-root',
@@ -85,5 +86,21 @@ export class App {
         ]
       }
     ]
+  }
+
+  downloadAsJpg(fileName: string = 'capture.jpeg') {
+    const element = document.getElementById("wrapper");
+    if (!element) return;
+
+    html2canvas(element, {scale: 3}).then(canvas => {
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = fileName;
+          link.click();
+        }
+      }, 'image/jpeg', 1); // JPEG quality
+    });
   }
 }
