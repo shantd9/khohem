@@ -9,79 +9,153 @@ import html2canvas from 'html2canvas';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('khohem-tools');
-
+  // recipe = {
+  //   title: "Strawberry Tart",
+  //   sections: [
+  //     {
+  //       sectionTitle: 'dough',
+  //       ingredients: [
+  //         {
+  //           unit: '1 ½ cups',
+  //           name: 'flour'
+  //         },
+  //         {
+  //           unit: '½ cup',
+  //           name: 'sugar (powdered)'
+  //         },
+  //         {
+  //           unit: '½ c. cup',
+  //           name: 'sunflower oil'
+  //         },
+  //         {
+  //           unit: '1 tsp',
+  //           name: 'baking powder'
+  //         },
+  //         {
+  //           unit: '½',
+  //           name: 'egg yolk'
+  //         },
+  //         {
+  //           unit: '½ cup',
+  //           name: 'butter'
+  //         },
+  //         {
+  //           unit: 'pinch',
+  //           name: 'vanilla powder'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       sectionTitle: 'creme',
+  //       ingredients: [
+  //         {
+  //           unit: '1 cup',
+  //           name: 'milk'
+  //         },
+  //         {
+  //           unit: '1',
+  //           name: 'egg'
+  //         },
+  //         {
+  //           unit: '1 tbsp',
+  //           name: 'flour'
+  //         },
+  //         {
+  //           unit: '¼ cup',
+  //           name: 'sugar'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       sectionTitle: 'glaze',
+  //       ingredients: [
+  //         {
+  //           unit: '2 tbsp',
+  //           name: 'strawberry jello'
+  //         },
+  //         {
+  //           unit: '4 tbsp',
+  //           name: 'warm water'
+  //         },
+  //         {
+  //           unit: '2 tbsp',
+  //           name: 'apricot jam'
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // }
   recipe = {
-    title: "Strawberry Tart",
+    title: "Ելակով Թարթ",
     sections: [
       {
-        sectionTitle: 'dough',
+        sectionTitle: 'խմոր',
         ingredients: [
           {
-            unit: '1 ½ cups',
-            name: 'flour'
+            unit: '1 ½ գ ',
+            name: 'ալիւր'
           },
           {
-            unit: '½ cup',
-            name: 'sugar (powdered)'
+            unit: '½ գ',
+            name: 'փոշի շաքար'
           },
           {
-            unit: '½ c. cup',
-            name: 'sunflower oil'
+            unit: '½ ս. գ',
+            name: 'ձէթ'
           },
           {
-            unit: '1 tsp',
-            name: 'baking powder'
+            unit: '1 թ. դգ',
+            name: 'պէյքինկ փաուտըր'
           },
           {
-            unit: '½',
-            name: 'egg yolk'
+            unit: '½ հատ',
+            name: 'հաւկիթի դեղնուց'
           },
           {
-            unit: '½ cup',
-            name: 'butter'
+            unit: '½ գ',
+            name: 'կարագ'
           },
           {
-            unit: 'pinch',
-            name: 'vanilla powder'
+            unit: 'պտղունց մը',
+            name: 'փոշի վանիլ'
           }
         ]
       },
       {
-        sectionTitle: 'creme',
+        sectionTitle: 'քրէմ',
         ingredients: [
           {
-            unit: '1 cup',
-            name: 'milk'
+            unit: '1 գ',
+            name: 'կաթ'
           },
           {
-            unit: '1',
-            name: 'egg'
+            unit: '1 հատ',
+            name: 'հաւկիթ'
           },
           {
-            unit: '1 tbsp',
-            name: 'flour'
+            unit: '1 ա. դգ',
+            name: 'ալիւր'
           },
           {
-            unit: '¼ cup',
-            name: 'sugar'
+            unit: '¼ գ',
+            name: 'շաքար'
           }
         ]
       },
       {
-        sectionTitle: 'glaze',
+        sectionTitle: 'ջնարակ',
         ingredients: [
           {
-            unit: '2 tbsp',
-            name: 'strawberry jello'
+            unit: '2 ա. դգ',
+            name: 'ելակի ճելօ'
           },
           {
-            unit: '4 tbsp',
-            name: 'warm water'
+            unit: '4 ա. դգ',
+            name: 'տաք ջուր'
           },
           {
-            unit: '2 tbsp',
-            name: 'apricot jam'
+            unit: '2 ա. դգ',
+            name: 'ծիրանի անուշ'
           }
         ]
       }
