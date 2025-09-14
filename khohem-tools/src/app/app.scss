@@ -1,0 +1,91 @@
+.wrapper {
+  display: flex;
+  width: 1080px;
+  height: 1350px;
+  background-color: purple;
+
+  $left-part-width: 600px;
+
+  .left-part {
+    width: $left-part-width;
+    display: flex;
+    flex-direction: column;
+    .image-wrapper {
+      height: 200px;
+      width: 100%;
+      .khohem-logo {
+        width: 500px;
+        height: 100%;
+      }
+
+    }
+
+    .title-wrapper {
+      color: orange;
+      text-align: center;
+      font-size: 44px;
+    }
+
+    .sections-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 200px;
+      .section {
+        display: flex;
+        gap: 65px;
+        .section-title-wrapper {
+          border: 1px solid white;
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+          background-color: wheat;
+          height: 194px;
+          width: 65px;
+          .section-title {
+            font-size: 37px;
+            font-family: 'Mardoto', sans-serif;
+            color: black;
+            transform: rotate(-90deg)translate(-90px, 0px)
+          }
+        }
+        .ingredients-wrapper {
+          width: 100%;
+          .ingredient {
+            display: flex;
+            gap: 20px;
+            $ingredient-unit-width: 100px;
+            .ingredient-unit {
+              color: yellow;
+              font-size: 22px;
+              width: $ingredient-unit-width;
+              text-align: right;
+              font-family: 'Mardoto', sans-serif;
+            }
+
+            .ingredient-name {
+              color: white;
+              font-size: 22px;
+              width: calc(100% - $ingredient-unit-width);
+              font-family: 'Mardoto', sans-serif;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .right-part {
+    width: calc(100% - $left-part-width);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      height: 100%;
+      position: relative;
+      left: -250px;
+    }
+
+  }
+
+}

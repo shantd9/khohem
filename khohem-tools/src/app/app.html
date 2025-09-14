@@ -1,0 +1,36 @@
+<div class="wrapper">
+
+  <div class="left-part">
+    <div class="image-wrapper">
+      <img class="khohem-logo" src="khohem.svg">
+    </div>
+
+    <div class="title-wrapper">
+      {{recipe.title}}
+      <hr>
+    </div>
+
+    <div class="sections-wrapper">
+      @for (item of recipe.sections; track item) {
+        <div class="section">
+          <div class="section-title-wrapper">
+            <div class="section-title">{{item.sectionTitle}}</div>
+          </div>
+          <div class="ingredients-wrapper">
+            @for (subItem of item.ingredients; track subItem) {
+              <div class="ingredient">
+                <div class="ingredient-unit"> {{subItem.unit}}</div>
+                <div class="ingredient-name"> {{subItem.name}}</div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+  <div class="right-part">
+    <img src="strawberry.png">
+  </div>
+
+</div>
