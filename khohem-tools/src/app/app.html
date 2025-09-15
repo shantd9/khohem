@@ -16,14 +16,7 @@
             <div class="section-title-wrapper">
               <div class="section-title">{{ item.sectionTitle }}</div>
             </div>
-            <div class="ingredients-wrapper">
-              @for (subItem of item.ingredients; track subItem) {
-                <div class="ingredient">
-                  <div class="ingredient-unit"> {{ subItem.unit }}</div>
-                  <div class="ingredient-name"> {{ subItem.name }}</div>
-                </div>
-              }
-            </div>
+            <app-ingredients-list [ingredients]="item.ingredients"></app-ingredients-list>
           </div>
         }
       </div>

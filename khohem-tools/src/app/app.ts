@@ -1,12 +1,13 @@
-import {Component, signal} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {Component} from '@angular/core';
 import html2canvas from 'html2canvas';
-import {RecipeImageDisplayer} from './recipe-image-displayer/recipe-image-displayer';
+import {RecipeImageDisplayer} from './ui/recipe-image-displayer/recipe-image-displayer';
+import {IngredientsList} from './ui/ingredients-list/ingredients-list';
 
 @Component({
   selector: 'app-root',
   imports: [
-    RecipeImageDisplayer
+    RecipeImageDisplayer,
+    IngredientsList
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

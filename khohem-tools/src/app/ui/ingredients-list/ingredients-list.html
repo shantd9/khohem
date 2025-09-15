@@ -1,0 +1,10 @@
+@if (ingredients(); as ingredients) {
+  <div class="ingredients-wrapper">
+    @for (subItem of ingredients; track subItem) {
+      <div class="ingredient">
+        <div class="ingredient-unit"> {{ subItem.unit }}</div>
+        <div class="ingredient-name"> {{ subItem.name }}</div>
+      </div>
+    }
+  </div>
+}
