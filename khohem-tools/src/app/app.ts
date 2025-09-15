@@ -1,10 +1,13 @@
 import {Component, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import html2canvas from 'html2canvas';
+import {RecipeImageDisplayer} from './recipe-image-displayer/recipe-image-displayer';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [
+    RecipeImageDisplayer
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -163,7 +166,7 @@ export class App {
   }
 
   downloadAsJpg(fileName: string = 'capture.jpeg') {
-    const element = document.getElementById("wrapper");
+    const element = document.getElementById("recipe-wrapper");
     if (!element) return;
 
     html2canvas(element, {scale: 3}).then(canvas => {
