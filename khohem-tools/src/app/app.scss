@@ -1,94 +1,107 @@
-.wrapper {
+.page-wrapper {
   display: flex;
-  width: 1080px;
-  height: 1350px;
-  background-color: purple;
+  gap: 20px;
 
-  $left-part-width: 600px;
-
-  .left-part {
-    width: $left-part-width;
+  .recipe-wrapper {
     display: flex;
-    flex-direction: column;
-    .image-wrapper {
-      height: 200px;
-      width: 100%;
-      align-content: center;
-      text-align: center;
-      .khohem-logo {
-        height: 75px;
-      }
+    width: 1080px;
+    height: 1350px;
+    background-color: purple;
 
-    }
+    $left-part-width: 600px;
 
-    .title-wrapper {
-      color: orange;
-      text-align: center;
-      font-size: 44px;
-      font-family: 'Mardoto', sans-serif;
-    }
-
-    .sections-wrapper {
+    .left-part {
+      width: $left-part-width;
       display: flex;
       flex-direction: column;
-      gap: 200px;
-      .section {
-        display: flex;
-        gap: 65px;
-        .section-title-wrapper {
-          border: 1px solid white;
-          border-top-right-radius: 50px;
-          border-bottom-right-radius: 50px;
-          background-color: wheat;
-          height: 194px;
-          width: 65px;
-          .section-title {
-            font-size: 37px;
-            font-family: 'Mardoto', sans-serif;
-            color: black;
-            transform: rotate(-90deg) translate(-95px, 0px)
-          }
+      .image-wrapper {
+        height: 200px;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+        .khohem-logo {
+          height: 75px;
         }
-        .ingredients-wrapper {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          .ingredient {
-            display: flex;
-            gap: 20px;
-            $ingredient-unit-width: 150px;
-            .ingredient-unit {
-              color: yellow;
-              font-size: 22px;
-              width: $ingredient-unit-width;
-              text-align: right;
-              font-family: 'Mardoto', sans-serif;
-            }
 
-            .ingredient-name {
-              color: white;
-              font-size: 22px;
-              width: calc(100% - $ingredient-unit-width);
+      }
+
+      .title-wrapper {
+        color: orange;
+        text-align: center;
+        font-size: 44px;
+        font-family: 'Mardoto', sans-serif;
+      }
+
+      .sections-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        .section {
+          display: flex;
+          gap: 65px;
+          .section-title-wrapper {
+            border: 1px solid white;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            background-color: wheat;
+            height: 194px;
+            width: 65px;
+            align-content: center;
+            .section-title {
+              font-size: 37px;
               font-family: 'Mardoto', sans-serif;
+              color: black;
+              //transform: rotate(-90deg) translate(-95px, 0px)
+              transform: rotate(-90deg)
+            }
+          }
+          .ingredients-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .ingredient {
+              display: flex;
+              gap: 20px;
+              $ingredient-unit-width: 150px;
+              .ingredient-unit {
+                color: yellow;
+                font-size: 22px;
+                width: $ingredient-unit-width;
+                text-align: right;
+                font-family: 'Mardoto', sans-serif;
+              }
+
+              .ingredient-name {
+                color: white;
+                font-size: 22px;
+                width: calc(100% - $ingredient-unit-width);
+                font-family: 'Mardoto', sans-serif;
+              }
             }
           }
         }
       }
     }
-  }
 
-  .right-part {
-    width: calc(100% - $left-part-width);
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    img {
+    .right-part {
+      width: calc(100% - $left-part-width);
       height: 100%;
+      overflow: hidden;
       position: relative;
-      left: -250px;
+      img {
+        height: 100%;
+        position: relative;
+        left: -250px;
+      }
+
     }
 
   }
 
+  .actions-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+  }
 }

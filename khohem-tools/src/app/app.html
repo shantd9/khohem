@@ -1,40 +1,42 @@
-<div id="wrapper" class="wrapper">
+<div class="page-wrapper">
+  <div id="recipe-wrapper" class="recipe-wrapper">
+    <div class="left-part">
+      <div class="image-wrapper">
+        <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
+      </div>
 
-  <div class="left-part">
-    <div class="image-wrapper">
-      <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
-    </div>
+      <div class="title-wrapper">
+        {{ recipe.title }}
+        <hr>
+      </div>
 
-    <div class="title-wrapper">
-      {{ recipe.title }}
-      <hr>
-    </div>
-
-    <div class="sections-wrapper">
-      @for (item of recipe.sections; track item) {
-        <div class="section">
-          <div class="section-title-wrapper">
-            <div class="section-title">{{ item.sectionTitle }}</div>
+      <div class="sections-wrapper">
+        @for (item of recipe.sections; track item) {
+          <div class="section">
+            <div class="section-title-wrapper">
+              <div class="section-title">{{ item.sectionTitle }}</div>
+            </div>
+            <div class="ingredients-wrapper">
+              @for (subItem of item.ingredients; track subItem) {
+                <div class="ingredient">
+                  <div class="ingredient-unit"> {{ subItem.unit }}</div>
+                  <div class="ingredient-name"> {{ subItem.name }}</div>
+                </div>
+              }
+            </div>
           </div>
-          <div class="ingredients-wrapper">
-            @for (subItem of item.ingredients; track subItem) {
-              <div class="ingredient">
-                <div class="ingredient-unit"> {{ subItem.unit }}</div>
-                <div class="ingredient-name"> {{ subItem.name }}</div>
-              </div>
-            }
-          </div>
-        </div>
-      }
+        }
+      </div>
+
+    </div>
+    <div class="right-part">
+      <img src="strawberry.png">
     </div>
 
   </div>
-  <div class="right-part">
-    <img src="strawberry.png">
+
+  <div class="actions-wrapper">
+    <button (click)="downloadAsJpg()">Download</button>
+    <button>Future action</button>
   </div>
-
-</div>
-
-<div class="">
-  <button (click)="downloadAsJpg()">Download</button>
 </div>
