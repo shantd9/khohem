@@ -2,12 +2,14 @@ import {Component} from '@angular/core';
 import html2canvas from 'html2canvas';
 import {RecipeImageDisplayer} from './ui/recipe-image-displayer/recipe-image-displayer';
 import {IngredientsList} from './ui/ingredients-list/ingredients-list';
+import {RecipeTitle} from './ui/recipe-title/recipe-title';
 
 @Component({
   selector: 'app-root',
   imports: [
     RecipeImageDisplayer,
-    IngredientsList
+    IngredientsList,
+    RecipeTitle
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

@@ -5,10 +5,7 @@
         <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
       </div>
 
-      <div class="title-wrapper">
-        {{ recipe.title }}
-        <hr>
-      </div>
+      <app-recipe-title [recipeTitle]="recipe.title"></app-recipe-title>
 
       <div class="sections-wrapper">
         @for (item of recipe.sections; track item) {
