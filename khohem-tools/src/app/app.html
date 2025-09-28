@@ -1,34 +1,44 @@
-<div class="page-wrapper">
-  <div id="recipe-wrapper" class="recipe-wrapper">
-    <div class="left-part">
-      <div class="image-wrapper">
-        <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
-      </div>
+<ng-container>
+    <div class="page-wrapper">
 
-      <app-recipe-title [recipeTitle]="language() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
-
-      <div class="sections-wrapper">
-        @for (item of recipe.sections; track item) {
-          <div class="section">
-            <div class="section-title-wrapper">
-              <span class="section-title">{{ language() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+      @if (recipe(); as recipe) {
+        <div id="recipe-wrapper" class="recipe-wrapper">
+          <div class="left-part">
+            <div class="image-wrapper">
+              <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
             </div>
-            <app-ingredients-list [language]="language()" [ingredients]="item.ingredients"></app-ingredients-list>
+
+            <app-recipe-title [recipeTitle]="language() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
+
+            <div class="sections-wrapper">
+              @for (item of recipe.sections; track item) {
+                <div class="section">
+                  <div class="section-title-wrapper">
+                    <span class="section-title">{{ language() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+                  </div>
+                  <app-ingredients-list [language]="language()" [ingredients]="item.ingredients"></app-ingredients-list>
+                </div>
+              }
+            </div>
+
           </div>
-        }
+          <div class="right-part">
+            <app-recipe-image-displayer [imageUrl]="'strawberry.png'"></app-recipe-image-displayer>
+          </div>
+
+        </div>
+
+      }
+      @else {
+        No recipe loaded
+      }
+
+      <div class="actions-wrapper">
+        <button (click)="downloadAsJpg()">Downloads</button>
+        <button (click)="toggleToArmenian()">Armenian</button>
+        <button (click)="toggleToEnglish()">English</button>
+        <button>Future action</button>
       </div>
-
-    </div>
-    <div class="right-part">
-      <app-recipe-image-displayer [imageUrl]="'strawberry.png'"></app-recipe-image-displayer>
     </div>
 
-  </div>
-
-  <div class="actions-wrapper">
-    <button (click)="downloadAsJpg()">Downloads</button>
-    <button (click)="toggleToArmenian()">Armenian</button>
-    <button (click)="toggleToEnglish()">English</button>
-    <button>Future action</button>
-  </div>
-</div>
+</ng-container>
