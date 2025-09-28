@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, input, signal} from '@angular/core';
 import html2canvas from 'html2canvas';
 import {RecipeImageDisplayer} from './ui/recipe-image-displayer/recipe-image-displayer';
 import {IngredientsList} from './ui/ingredients-list/ingredients-list';
@@ -56,6 +56,7 @@ export class App {
       }
     ]
   };
+  language = signal<'en' | 'hy'>('en')
   downloadAsJpg(fileName: string = 'capture.jpeg') {
     const element = document.getElementById("recipe-wrapper");
     if (!element) return;
@@ -70,5 +71,13 @@ export class App {
         }
       }, 'image/jpeg', 1); // JPEG quality
     });
+  }
+
+  toggleToArmenian() {
+    this.language.update(() => 'hy')
+  }
+
+  toggleToEnglish() {
+    this.language.update(() => 'en')
   }
 }

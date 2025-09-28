@@ -1,6 +1,7 @@
 import {Component, computed, input} from '@angular/core';
 import {Ingredient} from '../../shared/interfaces/recipe';
 import {IngredientNames} from '../../shared/interfaces/ingredient';
+import {UnitNames} from '../../shared/interfaces/unit';
 
 interface VmIngredient {
   name: string;      // The localized name
@@ -27,14 +28,14 @@ export class IngredientsList {
     }
 
     const localizedItems: VmIngredient[] = items.map(item => {
-      const translationMap = IngredientNames[item.ingredient];
-
-      const localizedName = translationMap[lang];
-
+      const ingredientTranslationMap = IngredientNames[item.ingredient];
+      const unitTranslationMap = UnitNames[item.unit];
+      const localizedName = ingredientTranslationMap[lang];
+      const localizedUnit =  unitTranslationMap[lang]
       return {
         name: localizedName,
         quantity: item.quantity,
-        unit: item.unit
+        unit: localizedUnit
       };
     });
 

@@ -5,15 +5,15 @@
         <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
       </div>
 
-      <app-recipe-title [recipeTitle]="recipe.title"></app-recipe-title>
+      <app-recipe-title [recipeTitle]="language() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
 
       <div class="sections-wrapper">
         @for (item of recipe.sections; track item) {
           <div class="section">
             <div class="section-title-wrapper">
-              <span class="section-title">{{ item.sectionTitle }}</span>
+              <span class="section-title">{{ language() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
             </div>
-            <app-ingredients-list [language]="'en'" [ingredients]="item.ingredients"></app-ingredients-list>
+            <app-ingredients-list [language]="language()" [ingredients]="item.ingredients"></app-ingredients-list>
           </div>
         }
       </div>
@@ -27,6 +27,8 @@
 
   <div class="actions-wrapper">
     <button (click)="downloadAsJpg()">Downloads</button>
+    <button (click)="toggleToArmenian()">Armenian</button>
+    <button (click)="toggleToEnglish()">English</button>
     <button>Future action</button>
   </div>
 </div>
