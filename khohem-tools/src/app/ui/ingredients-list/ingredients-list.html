@@ -2,8 +2,11 @@
   <div class="ingredients-wrapper">
     @for (subItem of ingredients; track subItem) {
       <div class="ingredient">
-        <div class="ingredient-unit"> {{ subItem.unit }}</div>
-        <div class="ingredient-name"> {{ subItem.name }}</div>
+        <div class="ingredient-unit-and-name">
+          <span class="ingredient-quantity"> {{ subItem.quantity }}</span>
+          <span class="ingredient-unit"> {{ subItem.unit }}</span>
+        </div>
+        <div class="ingredient-name"> {{ subItem.ingredient }}</div>
       </div>
     }
   </div>

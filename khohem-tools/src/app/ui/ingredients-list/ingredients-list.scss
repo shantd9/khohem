@@ -7,12 +7,15 @@
     display: flex;
     gap: 20px;
     $ingredient-unit-width: 150px;
-    .ingredient-unit {
+    .ingredient-unit-and-name {
       color: yellow;
       font-size: 22px;
       width: $ingredient-unit-width;
       text-align: right;
       font-family: 'Mardoto', sans-serif;
+    }
+    .ingredient-unit {
+
     }
 
     .ingredient-name {

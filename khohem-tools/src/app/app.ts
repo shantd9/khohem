@@ -3,6 +3,9 @@ import html2canvas from 'html2canvas';
 import {RecipeImageDisplayer} from './ui/recipe-image-displayer/recipe-image-displayer';
 import {IngredientsList} from './ui/ingredients-list/ingredients-list';
 import {RecipeTitle} from './ui/recipe-title/recipe-title';
+import {Recipe} from './shared/interfaces/recipe';
+import {UnitKey} from './shared/interfaces/unit';
+import {IngredientKey} from './shared/interfaces/ingredient';
 
 @Component({
   selector: 'app-root',
@@ -15,159 +18,44 @@ import {RecipeTitle} from './ui/recipe-title/recipe-title';
   styleUrl: './app.scss'
 })
 export class App {
-  // recipe = {
-  //   title: "Strawberry Tart",
-  //   sections: [
-  //     {
-  //       sectionTitle: 'dough',
-  //       ingredients: [
-  //         {
-  //           unit: '1 ½ cups',
-  //           name: 'flour'
-  //         },
-  //         {
-  //           unit: '½ cup',
-  //           name: 'sugar (powdered)'
-  //         },
-  //         {
-  //           unit: '½ c. cup',
-  //           name: 'sunflower oil'
-  //         },
-  //         {
-  //           unit: '1 tsp',
-  //           name: 'baking powder'
-  //         },
-  //         {
-  //           unit: '½',
-  //           name: 'egg yolk'
-  //         },
-  //         {
-  //           unit: '½ cup',
-  //           name: 'butter'
-  //         },
-  //         {
-  //           unit: 'pinch',
-  //           name: 'vanilla powder'
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       sectionTitle: 'creme',
-  //       ingredients: [
-  //         {
-  //           unit: '1 cup',
-  //           name: 'milk'
-  //         },
-  //         {
-  //           unit: '1',
-  //           name: 'egg'
-  //         },
-  //         {
-  //           unit: '1 tbsp',
-  //           name: 'flour'
-  //         },
-  //         {
-  //           unit: '¼ cup',
-  //           name: 'sugar'
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       sectionTitle: 'glaze',
-  //       ingredients: [
-  //         {
-  //           unit: '2 tbsp',
-  //           name: 'strawberry jello'
-  //         },
-  //         {
-  //           unit: '4 tbsp',
-  //           name: 'warm water'
-  //         },
-  //         {
-  //           unit: '2 tbsp',
-  //           name: 'apricot jam'
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // }
-  recipe = {
-    title: "Ելակով Թարթ",
+  recipe: Recipe = {
+    title: "Strawberry Tart",
+    titleHy: "Ելակով Թարթ",
     sections: [
       {
-        sectionTitle: 'խմոր',
+        sectionTitle: 'dough',
+        sectionTitleHy: 'խմոր',
         ingredients: [
-          {
-            unit: '1 ½ գ ',
-            name: 'ալիւր'
-          },
-          {
-            unit: '½ գ',
-            name: 'փոշի շաքար'
-          },
-          {
-            unit: '½ ս. գ',
-            name: 'ձէթ'
-          },
-          {
-            unit: '1 թ. դգ',
-            name: 'պէյքինկ փաուտըր'
-          },
-          {
-            unit: '½ հատ',
-            name: 'հաւկիթի դեղնուց'
-          },
-          {
-            unit: '½ գ',
-            name: 'կարագ'
-          },
-          {
-            unit: 'պտղունց մը',
-            name: 'փոշի վանիլ'
-          }
+          { quantity: "1 ½", unit: UnitKey.Cup, ingredient: IngredientKey.Flour },
+          { quantity: "½", unit: UnitKey.Cup, ingredient: IngredientKey.PowderedSugar },
+          { quantity: "½", unit: UnitKey.Tablespoon, ingredient: IngredientKey.Oil },
+          { quantity: "1", unit: UnitKey.Teaspoon, ingredient: IngredientKey.BakingPowder },
+          { quantity: "½", unit: UnitKey.Piece, ingredient: IngredientKey.EggYolk },
+          { quantity: "½", unit: UnitKey.Cup, ingredient: IngredientKey.Butter },
+          { quantity: "", unit: UnitKey.Pinch, ingredient: IngredientKey.VanillaPowder },
         ]
       },
       {
-        sectionTitle: 'քրէմ',
+        sectionTitle: 'cream',
+        sectionTitleHy: 'քրէմ',
         ingredients: [
-          {
-            unit: '1 գ',
-            name: 'կաթ'
-          },
-          {
-            unit: '1 հատ',
-            name: 'հաւկիթ'
-          },
-          {
-            unit: '1 ա. դգ',
-            name: 'ալիւր'
-          },
-          {
-            unit: '¼ գ',
-            name: 'շաքար'
-          }
+          { quantity: "1", unit: UnitKey.Cup, ingredient: IngredientKey.Milk },
+          { quantity: "1", unit: UnitKey.Piece, ingredient: IngredientKey.Egg },
+          { quantity: "1", unit: UnitKey.Tablespoon, ingredient: IngredientKey.Flour },
+          { quantity: "¼", unit: UnitKey.Cup, ingredient: IngredientKey.Sugar },
         ]
       },
       {
-        sectionTitle: 'ջնարակ',
+        sectionTitle: 'glaze',
+        sectionTitleHy: 'ջնարակ',
         ingredients: [
-          {
-            unit: '2 ա. դգ',
-            name: 'ելակի ճելօ'
-          },
-          {
-            unit: '4 ա. դգ',
-            name: 'տաք ջուր'
-          },
-          {
-            unit: '2 ա. դգ',
-            name: 'ծիրանի անուշ'
-          }
+          { quantity: "2", unit: UnitKey.Tablespoon, ingredient: IngredientKey.StrawberryJelly },
+          { quantity: "4", unit: UnitKey.Tablespoon, ingredient: IngredientKey.HotWater },
+          { quantity: "2", unit: UnitKey.Tablespoon, ingredient: IngredientKey.ApricotJam },
         ]
       }
     ]
-  }
-
+  };
   downloadAsJpg(fileName: string = 'capture.jpeg') {
     const element = document.getElementById("recipe-wrapper");
     if (!element) return;
