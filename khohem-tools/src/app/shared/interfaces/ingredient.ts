@@ -17,17 +17,17 @@ export enum IngredientKey {
 }
 
 export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> = {
-  [IngredientKey.Flour]: { en: 'Flour', hy: 'ալիւր' },
-  [IngredientKey.PowderedSugar]: { en: 'Powdered sugar', hy: 'փոշի շաքար' },
-  [IngredientKey.Oil]: { en: 'Oil', hy: 'ձէթ' },
-  [IngredientKey.BakingPowder]: { en: 'Baking powder', hy: 'պէյքինկ փաուտըր' },
-  [IngredientKey.EggYolk]: { en: 'Egg yolk', hy: 'հաւկիթի դեղնուց' },
-  [IngredientKey.Butter]: { en: 'Butter', hy: 'կարագ' },
-  [IngredientKey.VanillaPowder]: { en: 'Vanilla powder', hy: 'փոշի վանիլ' },
+  [IngredientKey.Flour]: { en: 'flour', hy: 'ալիւր' },
+  [IngredientKey.PowderedSugar]: { en: 'powdered sugar', hy: 'փոշի շաքար' },
+  [IngredientKey.Oil]: { en: 'oil', hy: 'ձէթ' },
+  [IngredientKey.BakingPowder]: { en: 'baking powder', hy: 'պէյքինկ փաուտըր' },
+  [IngredientKey.EggYolk]: { en: 'egg yolk', hy: 'հաւկիթի դեղնուց' },
+  [IngredientKey.Butter]: { en: 'butter', hy: 'կարագ' },
+  [IngredientKey.VanillaPowder]: { en: 'vanilla powder', hy: 'փոշի վանիլ' },
   [IngredientKey.Milk]: { en: 'milk', hy: 'կաթ' },
   [IngredientKey.Egg]: { en: 'egg', hy: 'հաւկիթ' },
   [IngredientKey.Sugar]: { en: 'sugar', hy: 'շաքար' },
-  [IngredientKey.StrawberryJelly]: { en: 'Strawberry jelly', hy: 'ելակի ճելօ' },
-  [IngredientKey.HotWater]: { en: 'Hot water', hy: 'տաք ջուր' },
-  [IngredientKey.ApricotJam]: { en: 'Apricot jam', hy: 'ծիրանի անուշ' },
+  [IngredientKey.StrawberryJelly]: { en: 'strawberry jelly', hy: 'ելակի ճելօ' },
+  [IngredientKey.HotWater]: { en: 'hot water', hy: 'տաք ջուր' },
+  [IngredientKey.ApricotJam]: { en: 'apricot jam', hy: 'ծիրանի անուշ' },
 };

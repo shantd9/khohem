@@ -1,12 +1,12 @@
-@if (ingredients(); as ingredients) {
+@if (vm(); as vm) {
   <div class="ingredients-wrapper">
-    @for (subItem of ingredients; track subItem) {
+    @for (subItem of vm; track subItem) {
       <div class="ingredient">
         <div class="ingredient-unit-and-name">
           <span class="ingredient-quantity"> {{ subItem.quantity }}</span>
           <span class="ingredient-unit"> {{ subItem.unit }}</span>
         </div>
-        <div class="ingredient-name"> {{ subItem.ingredient }}</div>
+        <div class="ingredient-name"> {{ subItem.name }}</div>
       </div>
     }
   </div>
