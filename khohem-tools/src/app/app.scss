@@ -39,13 +39,16 @@
             background-color: wheat;
             height: 194px;
             width: 65px;
-            align-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .section-title {
               font-size: 37px;
               font-family: 'Mardoto', sans-serif;
               color: black;
               //transform: rotate(-90deg) translate(-95px, 0px)
-              transform: rotate(-90deg)
+              transform: rotate(-90deg);
+              white-space: nowrap; /* prevents wrapping */
             }
           }
           .ingredients-wrapper {

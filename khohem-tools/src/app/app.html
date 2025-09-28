@@ -11,7 +11,7 @@
         @for (item of recipe.sections; track item) {
           <div class="section">
             <div class="section-title-wrapper">
-              <div class="section-title">{{ item.sectionTitle }}</div>
+              <span class="section-title">{{ item.sectionTitle }}</span>
             </div>
             <app-ingredients-list [ingredients]="item.ingredients"></app-ingredients-list>
           </div>
