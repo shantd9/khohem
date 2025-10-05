@@ -14,6 +14,15 @@ export enum IngredientKey {
   StrawberryJelly = 'strawberry_jelly',
   HotWater = 'hot_water',
   ApricotJam = 'apricot_jam',
+  Zuccini = 'zuccini',
+  PepperPaste = 'pepper_paste',
+  TomatoPaste = 'tomato_paste',
+  BlackPepper = 'black_pepper',
+  RedPepper = 'red_pepper',
+  Salt = 'salt',
+  GroundBeef = 'ground_beef',
+  Onion = 'onion',
+  SevenSpices = 'seven_spices',
 }
 
 export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> = {
@@ -30,4 +39,13 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.StrawberryJelly]: { en: 'strawberry jelly', hy: 'ելակի ճելօ' },
   [IngredientKey.HotWater]: { en: 'hot water', hy: 'տաք ջուր' },
   [IngredientKey.ApricotJam]: { en: 'apricot jam', hy: 'ծիրանի անուշ' },
+  [IngredientKey.Zuccini]: { en: 'zuccini', hy: 'դդում'},
+  [IngredientKey.PepperPaste]: { en: 'pepper paste', hy: 'պղպեղի խիւս' },
+  [IngredientKey.TomatoPaste]: { en: 'tomato paste', hy: 'լոլիկի խիւս' },
+  [IngredientKey.BlackPepper]: { en: 'black pepper', hy: 'սեւ պղպեղ' },
+  [IngredientKey.RedPepper]: { en: 'red pepper', hy: 'կարմիր պղպեղ' },
+  [IngredientKey.Salt]: { en: 'salt', hy: 'աղ' },
+  [IngredientKey.GroundBeef]: { en: 'ground beef', hy: 'քաշուած միս' },
+  [IngredientKey.Onion]: { en: 'onion', hy: 'սոխ' },
+  [IngredientKey.SevenSpices]: { en: 'seven spices', hy: '7 համեմներ' },
 };

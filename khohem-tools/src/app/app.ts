@@ -5,6 +5,7 @@ import {IngredientsList} from './ui/ingredients-list/ingredients-list';
 import {RecipeTitle} from './ui/recipe-title/recipe-title';
 import {Recipe} from './shared/interfaces/recipe';
 import {strawberryTart} from './ui/database';
+import {ttoum} from './ui/database/ttoum';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ export class App implements OnInit {
   language = signal<'en' | 'hy'>('en')
 
   ngOnInit() {
-    this.recipe.update(() => strawberryTart);
+    this.recipe.update(() => ttoum);
   }
 
   downloadAsJpg(fileName: string = 'capture.jpeg') {
