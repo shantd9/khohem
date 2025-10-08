@@ -8,7 +8,9 @@
               <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
             </div>
 
-            <app-recipe-title [recipeTitle]="language() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
+            <div class="title-wrapper">
+              <app-recipe-title [recipeTitle]="language() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
+            </div>
 
             <div class="sections-wrapper">
               @for (item of recipe.sections; track item) {
@@ -23,7 +25,7 @@
 
           </div>
           <div class="right-part">
-            <app-recipe-image-displayer [imageUrl]="'strawberry.png'"></app-recipe-image-displayer>
+            <app-recipe-image-displayer [imageUrl]="'ttoum.jpeg'"></app-recipe-image-displayer>
           </div>
 
         </div>

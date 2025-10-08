@@ -9,13 +9,15 @@
     background-color: purple;
 
     $left-part-width: 600px;
-
+    $title-height: 200px;
+    $image-wrapper-height: 200px;
     .left-part {
       width: $left-part-width;
-      display: flex;
-      flex-direction: column;
+      .title-wrapper {
+        height: $title-height;
+      }
       .image-wrapper {
-        height: 200px;
+        height: $image-wrapper-height;
         width: 100%;
         align-content: center;
         text-align: center;
