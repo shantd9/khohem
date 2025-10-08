@@ -8,34 +8,18 @@
     .section-title-wrapper {
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
-      background-color: rgb(90, 112, 246);
       height: 194px;
       width: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
-      &.odd {
-        background-color: white;
-      }
-      &.even {
-        background-color: rgb(90, 112, 246);
-      }
       .section-title {
         font-size: 32px;
         font-family: 'Mardoto', sans-serif;
         font-weight: bold;
-        color: white;
         //transform: rotate(-90deg) translate(-95px, 0px)
         transform: rotate(-90deg);
         white-space: nowrap; /* prevents wrapping */
-        &.odd {
-          color: rgb(90, 112, 246);
-
-        }
-        &.even {
-          color: white;
-
-        }
       }
     }
   }

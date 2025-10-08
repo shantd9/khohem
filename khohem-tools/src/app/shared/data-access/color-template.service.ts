@@ -11,7 +11,7 @@ export class ColorTemplateService {
       sectionsColorEven: "#5a6ff6",
       sectionsColorOdd: "#ffffff",
       sectionsTitleEven: "#ffffff",
-      sectionsTitleOdd: "#ffffff",
+      sectionsTitleOdd: "#5a6ff6",
       unitColor: "#5a6ff6",
       ingredientColor: "#ffffff",
       backgroundColor: "#EDC675"
@@ -26,6 +26,17 @@ export class ColorTemplateService {
       unitColor: "#f1dd55",
       ingredientColor: "#ffffff",
       backgroundColor: "#5d4278"
+    },
+    {
+      id: 3,
+      titleColor: "#FDF4C4",
+      sectionsColorEven: "#FDF4C4",
+      sectionsColorOdd: "#FFFFFF",
+      sectionsTitleEven: "#000000",
+      sectionsTitleOdd: "#000000",
+      unitColor: "#FDF4C4",
+      ingredientColor: "#ffffff",
+      backgroundColor: "#201F1F"
     }
   ])
 
@@ -73,9 +84,10 @@ export class ColorTemplateService {
   }
 
   toggleSelectedColorTemplate() {
-    this._selectedColorTemplateId.set(
-      this._selectedColorTemplateId() === 1 ? 2 : 1
-    )
+    const currentId = this._selectedColorTemplateId()
+    const currentIndex = this._colorTemplates().findIndex(ct => ct.id === currentId)
+    const nextIndex = (currentIndex + 1) % this._colorTemplates().length
+    this._selectedColorTemplateId.set(this._colorTemplates()[nextIndex].id)
   }
 
   constructor() {

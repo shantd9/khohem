@@ -2,7 +2,7 @@
     <div class="page-wrapper">
 
       @if (recipe(); as recipe) {
-        <div id="recipe-wrapper" class="recipe-wrapper">
+        <div id="recipe-wrapper" class="recipe-wrapper" [ngStyle]="{'background-color': colorTemplateService.getBackgroundColor()}">
           <div class="left-part">
             <div class="image-wrapper">
               <img class="khohem-logo" src="khohem.svg" alt="khohem-logo-missing">
