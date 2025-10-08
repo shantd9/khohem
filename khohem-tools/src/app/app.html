@@ -9,16 +9,16 @@
             </div>
 
             <div class="title-wrapper">
-              <app-recipe-title [recipeTitle]="language() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
+              <app-recipe-title [recipeTitle]="languageService.getCurrentLanguage() ==='hy' ? recipe.titleHy: recipe.title"></app-recipe-title>
             </div>
 
             <div class="sections-wrapper">
               @for (item of recipe.sections; track item; let i = $index) {
                 <div class="section">
                   <div class="section-title-wrapper {{i % 2 === 0 ? 'even': 'odd'}}">
-                    <span class="section-title {{i % 2 === 0 ? 'even': 'odd'}}">{{ language() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+                    <span class="section-title {{i % 2 === 0 ? 'even': 'odd'}}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
                   </div>
-                  <app-ingredients-list [language]="language()" [ingredients]="item.ingredients"></app-ingredients-list>
+                  <app-ingredients-list [language]="languageService.getCurrentLanguage()" [ingredients]="item.ingredients"></app-ingredients-list>
                 </div>
               }
             </div>
@@ -35,12 +35,8 @@
         No recipe loaded
       }
 
-      <div class="actions-wrapper">
-        <button (click)="downloadAsJpg()">Downloads</button>
-        <button (click)="toggleToArmenian()">Armenian</button>
-        <button (click)="toggleToEnglish()">English</button>
-        <button>Future action</button>
-      </div>
+      <app-action-buttons-wrapper></app-action-buttons-wrapper>
+
     </div>
 
 </ng-container>

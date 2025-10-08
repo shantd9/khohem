@@ -40,6 +40,10 @@ export class ColorTemplateService {
     this._selectedColorTemplateId.set(id)
   }
 
+  toggleSelectedColorTemplate() {
+    this._selectedColorTemplateId.set((this._selectedColorTemplateId() + 1) % this._colorTemplates().length)
+  }
+
   constructor() {
   }
 }
