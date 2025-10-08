@@ -16,6 +16,6 @@ export const UnitNames: Record<UnitKey, { en: string; hy: string }> = {
   [UnitKey.Piece]: { en: 'piece', hy: 'հատ' },
   [UnitKey.Pinch]: { en: 'pinch', hy: 'պտղունց մը' },
   [UnitKey.Cup]: { en: 'cup', hy: 'գ' },
-  [UnitKey.Kilogram]: { en: 'kg', hy: 'կգ' },
+  [UnitKey.Kilogram]: { en: 'kg', hy: 'քլկ' },
   [UnitKey.Gram]: { en: 'g', hy: 'կրմ' }
 };

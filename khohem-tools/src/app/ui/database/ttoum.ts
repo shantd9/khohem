@@ -4,17 +4,17 @@ import {IngredientKey} from '../../shared/interfaces/ingredient';
 
 export const ttoum: Recipe =  {
   title: "Zucchini & Meat",
-  titleHy: "Դդում",
+  titleHy: "Միսով Դդում",
   sections: [
     {
       sectionTitle: 'zucchini',
       sectionTitleHy: 'դդում',
       ingredients: [
-        { quantity: "1 ½", unit: UnitKey.Kilogram, ingredient: IngredientKey.Zucchini },
+        { quantity: "1", unit: UnitKey.Kilogram, ingredient: IngredientKey.Zucchini },
         { quantity: "1", unit: UnitKey.Tablespoon, ingredient: IngredientKey.PepperPaste },
         { quantity: "2", unit: UnitKey.Tablespoon, ingredient: IngredientKey.TomatoPaste },
-        { quantity: "1/4", unit: UnitKey.Teaspoon, ingredient: IngredientKey.BlackPepper },
-        { quantity: "1/4", unit: UnitKey.Teaspoon, ingredient: IngredientKey.RedPepper },
+        { quantity: "¼", unit: UnitKey.Teaspoon, ingredient: IngredientKey.BlackPepper },
+        { quantity: "¼", unit: UnitKey.Teaspoon, ingredient: IngredientKey.RedPepper },
         { quantity: "1", unit: UnitKey.Teaspoon, ingredient: IngredientKey.Salt },
       ]
     },
@@ -24,11 +24,11 @@ export const ttoum: Recipe =  {
       ingredients: [
         { quantity: "200", unit: UnitKey.Gram, ingredient: IngredientKey.GroundBeef },
         { quantity: "20", unit: UnitKey.Gram, ingredient: IngredientKey.Butter },
-        { quantity: "1/2", unit: UnitKey.Cup, ingredient: IngredientKey.Onion },
-        { quantity: "1/4", unit: UnitKey.Teaspoon, ingredient: IngredientKey.BlackPepper },
-        { quantity: "1/4", unit: UnitKey.Teaspoon, ingredient: IngredientKey.RedPepper },
-        { quantity: "1/4", unit: UnitKey.Teaspoon, ingredient: IngredientKey.SevenSpices },
-        { quantity: "1/2", unit: UnitKey.Teaspoon, ingredient: IngredientKey.Salt },
+        { quantity: "½", unit: UnitKey.Cup, ingredient: IngredientKey.Onion },
+        { quantity: "¼", unit: UnitKey.Teaspoon, ingredient: IngredientKey.BlackPepper },
+        { quantity: "¼", unit: UnitKey.Teaspoon, ingredient: IngredientKey.RedPepper },
+        { quantity: "¼", unit: UnitKey.Teaspoon, ingredient: IngredientKey.SevenSpices },
+        { quantity: "½", unit: UnitKey.Teaspoon, ingredient: IngredientKey.Salt },
       ]
     }
   ]

@@ -16,6 +16,8 @@
 .under-title-wrapper {
   display: flex;
   justify-self: center;
+  position: relative;
+  top: -120px;
   .under-title {
     width: 250px;
     text-align: center;

@@ -47,5 +47,5 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.Salt]: { en: 'salt', hy: 'աղ' },
   [IngredientKey.GroundBeef]: { en: 'ground beef', hy: 'քաշուած միս' },
   [IngredientKey.Onion]: { en: 'onion', hy: 'սոխ' },
-  [IngredientKey.SevenSpices]: { en: 'seven spices', hy: '7 համեմներ' },
+  [IngredientKey.SevenSpices]: { en: 'seven spices', hy: 'եօթ համեմներ' },
 };
