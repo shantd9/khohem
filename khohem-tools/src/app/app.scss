@@ -38,7 +38,6 @@
           .section-title-wrapper {
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
-            //background-color: wheat;
             background-color: rgb(90, 112, 246);
             height: 194px;
             width: 65px;
@@ -54,6 +53,7 @@
             .section-title {
               font-size: 37px;
               font-family: 'Mardoto', sans-serif;
+              font-weight: bold;
               color: white;
               //transform: rotate(-90deg) translate(-95px, 0px)
               transform: rotate(-90deg);

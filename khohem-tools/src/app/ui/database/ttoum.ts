@@ -7,8 +7,8 @@ export const ttoum: Recipe =  {
   titleHy: "Դդում",
   sections: [
     {
-      sectionTitle: 'Zucchini',
-      sectionTitleHy: 'Դդում',
+      sectionTitle: 'zucchini',
+      sectionTitleHy: 'դդում',
       ingredients: [
         { quantity: "1 ½", unit: UnitKey.Kilogram, ingredient: IngredientKey.Zucchini },
         { quantity: "1", unit: UnitKey.Tablespoon, ingredient: IngredientKey.PepperPaste },
@@ -19,8 +19,8 @@ export const ttoum: Recipe =  {
       ]
     },
     {
-      sectionTitle: 'Meat',
-      sectionTitleHy: 'Միս',
+      sectionTitle: 'meat',
+      sectionTitleHy: 'միս',
       ingredients: [
         { quantity: "200", unit: UnitKey.Gram, ingredient: IngredientKey.GroundBeef },
         { quantity: "20", unit: UnitKey.Gram, ingredient: IngredientKey.Butter },
