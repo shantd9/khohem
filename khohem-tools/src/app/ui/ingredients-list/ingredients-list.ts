@@ -1,7 +1,9 @@
-import {Component, computed, input} from '@angular/core';
+import {Component, computed, inject, input} from '@angular/core';
 import {Ingredient} from '../../shared/interfaces/recipe';
 import {IngredientNames} from '../../shared/interfaces/ingredient';
 import {UnitNames} from '../../shared/interfaces/unit';
+import {ColorTemplateService} from '../../shared/data-access/color-template.service';
+import {NgStyle} from '@angular/common';
 
 interface VmIngredient {
   name: string;      // The localized name
@@ -11,13 +13,16 @@ interface VmIngredient {
 
 @Component({
   selector: 'app-ingredients-list',
-  imports: [],
+  imports: [
+    NgStyle
+  ],
   templateUrl: './ingredients-list.html',
   styleUrl: './ingredients-list.scss'
 })
 export class IngredientsList {
   ingredients = input.required<Ingredient[]>();
   language = input.required<'en' | 'hy'>();
+  colorTemplateService = inject(ColorTemplateService);
 
   vm = computed<VmIngredient[]>(() => {
     const items = this.ingredients();

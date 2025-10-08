@@ -2,11 +2,11 @@
   <div class="ingredients-wrapper">
     @for (subItem of vm; track subItem) {
       <div class="ingredient">
-        <div class="ingredient-unit-and-name">
+        <div class="ingredient-unit-and-name" [ngStyle]="{ 'color': colorTemplateService.getUnitColor()}">
           <span class="ingredient-quantity"> {{ subItem.quantity }}</span>
           <span class="ingredient-unit"> {{ subItem.unit }}</span>
         </div>
-        <div class="ingredient-name"> {{ subItem.name }}</div>
+        <div class="ingredient-name" [ngStyle]="{ 'color': colorTemplateService.getIngredientColor()}"> {{ subItem.name }}</div>
       </div>
     }
   </div>

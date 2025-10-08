@@ -1,6 +1,6 @@
-import {Recipe} from '../../shared/interfaces/recipe';
-import {UnitKey} from '../../shared/interfaces/unit';
-import {IngredientKey} from '../../shared/interfaces/ingredient';
+import {Recipe} from '../interfaces/recipe';
+import {UnitKey} from '../interfaces/unit';
+import {IngredientKey} from '../interfaces/ingredient';
 
 export const strawberryTart: Recipe =  {
   title: "Strawberry Tart",

@@ -8,7 +8,6 @@
     $ingredient-unit-width: 150px;
     height: 36px;
     .ingredient-unit-and-name {
-      color: rgb(90, 112, 246);
       font-size: 28px;
       width: $ingredient-unit-width;
       text-align: right;
@@ -20,7 +19,6 @@
     }
 
     .ingredient-name {
-      color: white;
       font-size: 28px;
       width: calc(100% - $ingredient-unit-width);
       font-family: 'Mardoto', sans-serif;

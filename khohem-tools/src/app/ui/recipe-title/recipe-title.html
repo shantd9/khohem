@@ -1,6 +1,6 @@
 @if (recipeTitle(); as recipeTitle) {
   <div class="recipe-title-wrapper">
-    <div class="recipe-title">{{ recipeTitle }}</div>
+    <div class="recipe-title" [ngStyle]="{color: colorTemplateService.getTitleColor()}">{{ recipeTitle }}</div>
     <div class="under-title-wrapper">
       <img class="under-title" src="under-title.png">
     </div>

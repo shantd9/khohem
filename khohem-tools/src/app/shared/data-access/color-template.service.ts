@@ -36,12 +36,46 @@ export class ColorTemplateService {
     return this._colorTemplates().find(ct => ct.id === this._selectedColorTemplateId())
   }
 
+  getTitleColor(): string {
+    return this.getSelectedColorTemplate()?.titleColor || "#000000"
+  }
+
+  getBackgroundColor(): string {
+    return this.getSelectedColorTemplate()?.backgroundColor || "#ffffff"
+  }
+
+  getSectionColorEven(): string {
+    return this.getSelectedColorTemplate()?.sectionsColorEven || "#ffffff"
+  }
+
+  getSectionColorOdd(): string {
+    return this.getSelectedColorTemplate()?.sectionsColorOdd || "#ffffff"
+  }
+
+  getSectionTitleColorEven(): string {
+    return this.getSelectedColorTemplate()?.sectionsTitleEven || "#000000"
+  }
+
+  getSectionTitleColorOdd(): string {
+    return this.getSelectedColorTemplate()?.sectionsTitleOdd || "#000000"
+  }
+
+  getUnitColor(): string {
+    return this.getSelectedColorTemplate()?.unitColor || "#000000"
+  }
+
+  getIngredientColor(): string {
+    return this.getSelectedColorTemplate()?.ingredientColor || "#000000"
+  }
+
   setSelectedColorTemplate(id: number) {
     this._selectedColorTemplateId.set(id)
   }
 
   toggleSelectedColorTemplate() {
-    this._selectedColorTemplateId.set((this._selectedColorTemplateId() + 1) % this._colorTemplates().length)
+    this._selectedColorTemplateId.set(
+      this._selectedColorTemplateId() === 1 ? 2 : 1
+    )
   }
 
   constructor() {
