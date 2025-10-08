@@ -13,23 +13,13 @@
             </div>
 
             <div class="sections-wrapper">
-              @for (item of recipe.sections; track item; let i = $index) {
-                <div class="section">
-                  <div class="section-title-wrapper {{i % 2 === 0 ? 'even': 'odd'}}">
-                    <span class="section-title {{i % 2 === 0 ? 'even': 'odd'}}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
-                  </div>
-                  <app-ingredients-list [language]="languageService.getCurrentLanguage()" [ingredients]="item.ingredients"></app-ingredients-list>
-                </div>
-              }
+              <app-recipe-sections-displayer [recipeSections]="recipe.sections"></app-recipe-sections-displayer>
             </div>
-
           </div>
           <div class="right-part">
             <app-recipe-image-displayer [imageUrl]="'ttoum.jpeg'"></app-recipe-image-displayer>
           </div>
-
         </div>
-
       }
       @else {
         No recipe loaded

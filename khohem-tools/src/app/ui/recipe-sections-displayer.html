@@ -1,0 +1,10 @@
+<div class="recipe-sections-wrapper">
+  @for (item of recipeSections(); track item; let i = $index) {
+    <div class="section">
+      <div class="section-title-wrapper {{i % 2 === 0 ? 'even': 'odd'}}">
+        <span class="section-title {{i % 2 === 0 ? 'even': 'odd'}}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+      </div>
+      <app-ingredients-list [language]="languageService.getCurrentLanguage()" [ingredients]="item.ingredients"></app-ingredients-list>
+    </div>
+  }
+</div>

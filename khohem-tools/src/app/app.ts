@@ -9,6 +9,7 @@ import {ttoum} from './ui/database/ttoum';
 import {ColorTemplateService} from './shared/data-access/color-template.service';
 import {ActionButtonsWrapper} from './ui/action-buttons-wrapper/action-buttons-wrapper';
 import {LanguageService} from './shared/data-access/language.service';
+import {RecipeSectionsDisplayer} from './ui/recipe-sections-displayer';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import {LanguageService} from './shared/data-access/language.service';
     RecipeImageDisplayer,
     IngredientsList,
     RecipeTitle,
-    ActionButtonsWrapper
+    ActionButtonsWrapper,
+    RecipeSectionsDisplayer
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
