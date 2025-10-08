@@ -10,7 +10,7 @@ export const ttoum: Recipe =  {
       sectionTitle: 'Zucchini',
       sectionTitleHy: 'Դդում',
       ingredients: [
-        { quantity: "1 ½", unit: UnitKey.Kilogram, ingredient: IngredientKey.Zuccini },
+        { quantity: "1 ½", unit: UnitKey.Kilogram, ingredient: IngredientKey.Zucchini },
         { quantity: "1", unit: UnitKey.Tablespoon, ingredient: IngredientKey.PepperPaste },
         { quantity: "2", unit: UnitKey.Tablespoon, ingredient: IngredientKey.TomatoPaste },
         { quantity: "1/4", unit: UnitKey.Teaspoon, ingredient: IngredientKey.BlackPepper },

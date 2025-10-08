@@ -7,6 +7,7 @@
     width: 1080px;
     height: 1350px;
     background-color: purple;
+    background-color: rgb(245, 194, 103);
 
     $left-part-width: 600px;
     $title-height: 200px;
@@ -35,46 +36,35 @@
           display: flex;
           gap: 65px;
           .section-title-wrapper {
-            border: 1px solid white;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
-            background-color: wheat;
+            //background-color: wheat;
+            background-color: rgb(90, 112, 246);
             height: 194px;
             width: 65px;
             display: flex;
             justify-content: center;
             align-items: center;
+            &.odd {
+              background-color: white;
+            }
+            &.even {
+              background-color: rgb(90, 112, 246);
+            }
             .section-title {
               font-size: 37px;
               font-family: 'Mardoto', sans-serif;
-              color: black;
+              color: white;
               //transform: rotate(-90deg) translate(-95px, 0px)
               transform: rotate(-90deg);
               white-space: nowrap; /* prevents wrapping */
-            }
-          }
-          .ingredients-wrapper {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            .ingredient {
-              display: flex;
-              gap: 20px;
-              $ingredient-unit-width: 150px;
-              .ingredient-unit {
-                color: yellow;
-                font-size: 22px;
-                width: $ingredient-unit-width;
-                text-align: right;
-                font-family: 'Mardoto', sans-serif;
-              }
+              &.odd {
+                color: rgb(90, 112, 246);
 
-              .ingredient-name {
+              }
+              &.even {
                 color: white;
-                font-size: 22px;
-                width: calc(100% - $ingredient-unit-width);
-                font-family: 'Mardoto', sans-serif;
+
               }
             }
           }

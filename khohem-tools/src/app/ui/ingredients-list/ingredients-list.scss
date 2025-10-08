@@ -7,8 +7,9 @@
     display: flex;
     gap: 20px;
     $ingredient-unit-width: 150px;
+    height: 24px;
     .ingredient-unit-and-name {
-      color: yellow;
+      color: rgb(90, 112, 246);
       font-size: 22px;
       width: $ingredient-unit-width;
       text-align: right;

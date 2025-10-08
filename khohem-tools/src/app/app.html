@@ -13,10 +13,10 @@
             </div>
 
             <div class="sections-wrapper">
-              @for (item of recipe.sections; track item) {
+              @for (item of recipe.sections; track item; let i = $index) {
                 <div class="section">
-                  <div class="section-title-wrapper">
-                    <span class="section-title">{{ language() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+                  <div class="section-title-wrapper {{i % 2 === 0 ? 'even': 'odd'}}">
+                    <span class="section-title {{i % 2 === 0 ? 'even': 'odd'}}">{{ language() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
                   </div>
                   <app-ingredients-list [language]="language()" [ingredients]="item.ingredients"></app-ingredients-list>
                 </div>
