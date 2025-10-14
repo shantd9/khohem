@@ -6,7 +6,9 @@ export enum UnitKey {
   Pinch = 'pinch',
   Cup = 'cup',
   Kilogram = 'kilogram',
-  Gram = 'gram'
+  Gram = 'gram',
+  Milliliter = 'milliliter',
+  Clove = 'clove'
 }
 
 export const UnitNames: Record<UnitKey, { en: string; hy: string }> = {
@@ -17,5 +19,7 @@ export const UnitNames: Record<UnitKey, { en: string; hy: string }> = {
   [UnitKey.Pinch]: { en: 'pinch', hy: 'պտղունց մը' },
   [UnitKey.Cup]: { en: 'cup', hy: 'գ' },
   [UnitKey.Kilogram]: { en: 'kg', hy: 'քլկ' },
-  [UnitKey.Gram]: { en: 'g', hy: 'կրմ' }
+  [UnitKey.Gram]: { en: 'g', hy: 'կրմ' },
+  [UnitKey.Milliliter]: { en: 'ml', hy: 'մլ' },
+  [UnitKey.Clove]: { en: 'clove', hy: 'պճեղ' }
 };
