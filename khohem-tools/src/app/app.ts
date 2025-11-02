@@ -7,7 +7,7 @@ import {LanguageService} from './shared/data-access/language.service';
 import {RecipeSectionsDisplayer} from './ui/recipe-sections-displayer/recipe-sections-displayer';
 import {NgStyle} from '@angular/common';
 import {ColorTemplateService} from './shared/data-access/color-template.service';
-import {beefSpaghetti} from './shared/database/beefSpaghetti';
+import {sfouf} from './shared/database';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +27,6 @@ export class App implements OnInit {
   colorTemplateService = inject(ColorTemplateService)
 
   ngOnInit() {
-    this.recipe.update(() => beefSpaghetti);
+    this.recipe.update(() => sfouf);
   }
 }

@@ -43,6 +43,10 @@ export enum IngredientKey {
   Vanilla = 'vanilla',
   N5Spaghetti = 'n5spaghetti',
   BiftekMeat = 'biftek_meat',
+  FineSemolina = 'fine_semolina',
+  SunflowerOil = 'sunflower_oil',
+  Turmeric = 'turmeric',
+  Anise = 'anise',
 }
 
 export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> = {
@@ -88,4 +92,8 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.Vanilla]: {en: 'vanilla', hy: 'վանիլ'},
   [IngredientKey.N5Spaghetti]: {en: 'N°5 Spaghetti', hy: 'n5 սպագետի'},
   [IngredientKey.BiftekMeat]: {en: 'biftek meat', hy: 'բիֆթեքի միս'},
+  [IngredientKey.FineSemolina]: { en: 'fine semolina', hy: 'բարակ սէմոլինա' },
+  [IngredientKey.SunflowerOil]: { en: 'sunflower oil', hy: 'արեւածաղկի ձէթ' },
+  [IngredientKey.Turmeric]: { en: 'turmeric', hy: 'կուրկումա' },
+  [IngredientKey.Anise]: { en: 'anise', hy: 'անիսոն' },
 };
