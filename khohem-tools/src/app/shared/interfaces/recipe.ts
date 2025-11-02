@@ -9,8 +9,8 @@ export interface Recipe {
 }
 
 export interface RecipeSection {
-  sectionTitle: string;
-  sectionTitleHy: string
+  sectionTitle?: string;
+  sectionTitleHy?: string
   ingredients: Ingredient[]
 }
 

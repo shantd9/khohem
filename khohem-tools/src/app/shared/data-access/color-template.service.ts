@@ -37,6 +37,17 @@ export class ColorTemplateService {
       unitColor: "#FDF4C4",
       ingredientColor: "#ffffff",
       backgroundColor: "#201F1F"
+    },
+    {
+      id: 4,
+      titleColor: "#FADF70",
+      sectionsColorEven: "#FDF4C4",
+      sectionsColorOdd: "#FFFFFF",
+      sectionsTitleEven: "#000000",
+      sectionsTitleOdd: "#000000",
+      unitColor: "#FADF70",
+      ingredientColor: "#FFFFFF",
+      backgroundColor: "#bf7647"
     }
   ])
 

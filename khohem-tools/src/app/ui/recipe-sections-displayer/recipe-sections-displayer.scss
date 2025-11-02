@@ -5,6 +5,11 @@
   .section {
     display: flex;
     gap: 65px;
+
+    .section-title-wrapper-empty {
+      height: 194px;
+      width: 60px;
+    }
     .section-title-wrapper {
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
@@ -22,5 +27,6 @@
         white-space: nowrap; /* prevents wrapping */
       }
     }
+
   }
 }

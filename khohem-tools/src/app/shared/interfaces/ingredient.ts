@@ -41,6 +41,8 @@ export enum IngredientKey {
   BakingSoda = 'baking_soda',
   Yogurt = 'yogurt',
   Vanilla = 'vanilla',
+  N5Spaghetti = 'n5spaghetti',
+  BiftekMeat = 'biftek_meat',
 }
 
 export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> = {
@@ -84,4 +86,6 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.BakingSoda]: {en: 'baking soda', hy: 'պէյքինկ սոտա'},
   [IngredientKey.Yogurt]: {en: 'yogurt', hy: 'մածուն'},
   [IngredientKey.Vanilla]: {en: 'vanilla', hy: 'վանիլ'},
+  [IngredientKey.N5Spaghetti]: {en: 'N°5 Spaghetti', hy: 'n5 սպագետի'},
+  [IngredientKey.BiftekMeat]: {en: 'biftek meat', hy: 'բիֆթեքի միս'},
 };

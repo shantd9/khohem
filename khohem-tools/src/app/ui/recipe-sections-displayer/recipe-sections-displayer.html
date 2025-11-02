@@ -1,15 +1,21 @@
 <div class="recipe-sections-wrapper">
   @for (item of recipeSections(); track item; let i = $index) {
     <div class="section">
-      @if (i % 2 === 0) {
-        <div class="section-title-wrapper" [ngStyle]="{'background-color': colorTemplateService.getSectionColorEven()}">
-          <span class="section-title" [ngStyle]="{'color': colorTemplateService.getSectionTitleColorEven()}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+      @if (!item.sectionTitle && !item.sectionTitleHy) {
+        <div class="section-title-wrapper-empty">
+
         </div>
-      }
-      @if (i % 2 === 1) {
-        <div class="section-title-wrapper" [ngStyle]="{'background-color': colorTemplateService.getSectionColorOdd()}">
-          <span class="section-title" [ngStyle]="{'color': colorTemplateService.getSectionTitleColorOdd()}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
-        </div>
+      } @else {
+        @if (i % 2 === 0) {
+          <div class="section-title-wrapper" [ngStyle]="{'background-color': colorTemplateService.getSectionColorEven()}">
+            <span class="section-title" [ngStyle]="{'color': colorTemplateService.getSectionTitleColorEven()}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+          </div>
+        }
+        @if (i % 2 === 1) {
+          <div class="section-title-wrapper" [ngStyle]="{'background-color': colorTemplateService.getSectionColorOdd()}">
+            <span class="section-title" [ngStyle]="{'color': colorTemplateService.getSectionTitleColorOdd()}">{{ languageService.getCurrentLanguage() === 'hy' ? item.sectionTitleHy : item.sectionTitle }}</span>
+          </div>
+        }
       }
 
       <app-ingredients-list [language]="languageService.getCurrentLanguage()" [ingredients]="item.ingredients"></app-ingredients-list>
