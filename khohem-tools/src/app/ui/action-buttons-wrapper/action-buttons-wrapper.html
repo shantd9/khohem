@@ -1,6 +1,8 @@
 <div class="actions-wrapper">
   <button (click)="downloadAsJpg()">Downloads</button>
-  <button (click)="toggleToArmenian()">Armenian</button>
-  <button (click)="toggleToEnglish()">English</button>
-  <button (click)="toggleStyles()">Toggle styles</button>
+  <button (click)="toggleToArmenian()">Show Armenian</button>
+  <button (click)="toggleToEnglish()">Show English</button>
+  <div>
+     <app-color-picker (colorTemplateSelected)="colorTemplateService.setSelectedColorTemplate($event)"></app-color-picker>
+  </div>
 </div>

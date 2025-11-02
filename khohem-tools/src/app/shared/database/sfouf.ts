@@ -5,7 +5,7 @@ import {IngredientKey} from '../interfaces/ingredient';
 export const sfouf: Recipe = {
   title: 'Sfouf',
   titleHy: 'Սֆուֆ',
-  recipeImageUrl: 'assets/images/recipes/sfouf.jpg',
+  recipeImageUrl: 'sfouf.jpg',
   sections: [
     {
       ingredients: [

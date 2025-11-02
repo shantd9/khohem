@@ -64,6 +64,13 @@ export class ColorTemplateService {
 
   _selectedColorTemplateId: WritableSignal<number> = signal(1)
 
+  getColorTemplateMainColors(): Pick<ColorTemplate, 'id' | 'titleColor' | 'backgroundColor'>[] {
+    return this._colorTemplates().map(ct => ({
+      id: ct.id,
+      titleColor: ct.titleColor,
+      backgroundColor: ct.backgroundColor
+    }) )
+  }
 
   getSelectedColorTemplate(): ColorTemplate | undefined {
     return this._colorTemplates().find(ct => ct.id === this._selectedColorTemplateId())

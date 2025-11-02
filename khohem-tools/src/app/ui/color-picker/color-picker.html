@@ -1,0 +1,11 @@
+<div class="color-picker-wrapper">
+  @for (colorCombo of colorTemplateService.getColorTemplateMainColors(); track colorCombo.id) {
+    <div
+      class="color-square"
+      [style.--a]="colorCombo.titleColor"
+      [style.--b]="colorCombo.backgroundColor"
+      (click)="colorTemplateSelected.emit(colorCombo.id)"
+    ></div>
+  }
+
+</div>

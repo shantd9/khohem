@@ -1,0 +1,15 @@
+.color-picker-wrapper {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+}
+.color-square {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  aspect-ratio: 1;              /* keeps it square */
+  --a: #5a6ff6;                 /* top-left color */
+  --b: #edc675;                 /* bottom-right color */
+  background: linear-gradient(to bottom right, var(--a) 50%, var(--b) 0);
+}

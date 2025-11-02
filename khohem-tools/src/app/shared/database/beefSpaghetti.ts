@@ -5,7 +5,7 @@ import {IngredientKey} from '../interfaces/ingredient';
 export const beefSpaghetti: Recipe = {
   title: "Beef Spaghetti",
   titleHy: "Մսով Սպագետի",
-  recipeImageUrl: "chocolateMuffin.jpeg",
+  recipeImageUrl: "beefSpaghetti.png",
   sections: [
     {
       // sectionTitle: '',
