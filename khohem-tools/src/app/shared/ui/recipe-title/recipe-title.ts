@@ -1,5 +1,5 @@
 import {Component, inject, input} from '@angular/core';
-import {ColorTemplateService} from '../../shared/data-access/color-template.service';
+import {ColorTemplateService} from '../../data-access/color-template.service';
 import {NgStyle} from '@angular/common';
 
 @Component({

@@ -1,8 +1,8 @@
 import {Component, computed, inject, input} from '@angular/core';
-import {Ingredient} from '../../shared/interfaces/recipe';
-import {IngredientNames} from '../../shared/interfaces/ingredient';
-import {UnitNames} from '../../shared/interfaces/unit';
-import {ColorTemplateService} from '../../shared/data-access/color-template.service';
+import {Ingredient} from '../../interfaces/recipe';
+import {IngredientNames} from '../../interfaces/ingredient';
+import {UnitNames} from '../../interfaces/unit';
+import {ColorTemplateService} from '../../data-access/color-template.service';
 import {NgStyle} from '@angular/common';
 
 interface VmIngredient {
