@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="right-part">
-            <app-recipe-image-displayer [imageUrl]="'honeySrirachaChicken.jpeg'"></app-recipe-image-displayer>
+            <app-recipe-image-displayer [imageUrl]="recipe.recipeImageUrl ?? 'image-not-found.png'"></app-recipe-image-displayer>
           </div>
         </div>
       }

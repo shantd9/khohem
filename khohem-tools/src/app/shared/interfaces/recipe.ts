@@ -5,6 +5,7 @@ export interface Recipe {
   title: string;
   titleHy: string
   sections: RecipeSection[]
+  recipeImageUrl?: string;
 }
 
 export interface RecipeSection {

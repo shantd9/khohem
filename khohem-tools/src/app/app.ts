@@ -2,13 +2,12 @@ import {Component, inject, OnInit, signal} from '@angular/core';
 import {RecipeImageDisplayer} from './ui/recipe-image-displayer/recipe-image-displayer';
 import {RecipeTitle} from './ui/recipe-title/recipe-title';
 import {Recipe} from './shared/interfaces/recipe';
-import {ttoum} from './shared/database/ttoum';
 import {ActionButtonsWrapper} from './ui/action-buttons-wrapper/action-buttons-wrapper';
 import {LanguageService} from './shared/data-access/language.service';
 import {RecipeSectionsDisplayer} from './ui/recipe-sections-displayer/recipe-sections-displayer';
 import {NgStyle} from '@angular/common';
 import {ColorTemplateService} from './shared/data-access/color-template.service';
-import {honeySrirachaChicken} from './shared/database';
+import {chocolateMuffins,} from './shared/database';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +27,6 @@ export class App implements OnInit {
   colorTemplateService = inject(ColorTemplateService)
 
   ngOnInit() {
-    this.recipe.update(() => honeySrirachaChicken);
+    this.recipe.update(() => chocolateMuffins);
   }
 }

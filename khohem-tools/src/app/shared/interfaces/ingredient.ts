@@ -37,6 +37,10 @@ export enum IngredientKey {
   ColdWater = 'cold_water',
   Broccolini = 'broccolini',
   WhitePepper = 'white_pepper',
+  CocoaPowder = 'cocoa_powder',
+  BakingSoda = 'baking_soda',
+  Yogurt = 'yogurt',
+  Vanilla = 'vanilla',
 }
 
 export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> = {
@@ -48,7 +52,7 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.Butter]: {en: 'butter', hy: 'կարագ'},
   [IngredientKey.VanillaPowder]: {en: 'vanilla powder', hy: 'փոշի վանիլ'},
   [IngredientKey.Milk]: {en: 'milk', hy: 'կաթ'},
-  [IngredientKey.Egg]: {en: 'egg', hy: 'հաւկիթ'},
+  [IngredientKey.Egg]: {en: 'eggs', hy: 'հաւկիթ'},
   [IngredientKey.Sugar]: {en: 'sugar', hy: 'շաքար'},
   [IngredientKey.StrawberryJelly]: {en: 'strawberry jelly', hy: 'ելակի ճելօ'},
   [IngredientKey.HotWater]: {en: 'hot water', hy: 'տաք ջուր'},
@@ -76,4 +80,8 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.ColdWater]: {en: 'cold water', hy: 'ցուրտ ջուր'},
   [IngredientKey.Broccolini]: {en: 'broccolini', hy: 'բրոկոլինի'},
   [IngredientKey.WhitePepper]: {en: 'white pepper', hy: 'սպիտակ պղպեղ'},
+  [IngredientKey.CocoaPowder]: {en: 'cocoa powder', hy: 'փոշի գագաօ'},
+  [IngredientKey.BakingSoda]: {en: 'baking soda', hy: 'պէյքինկ սոտա'},
+  [IngredientKey.Yogurt]: {en: 'yogurt', hy: 'մածուն'},
+  [IngredientKey.Vanilla]: {en: 'vanilla', hy: 'վանիլ'},
 };

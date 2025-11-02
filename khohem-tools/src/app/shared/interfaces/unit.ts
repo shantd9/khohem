@@ -8,7 +8,8 @@ export enum UnitKey {
   Kilogram = 'kilogram',
   Gram = 'gram',
   Milliliter = 'milliliter',
-  Clove = 'clove'
+  Clove = 'clove',
+  Times = 'times'
 }
 
 export const UnitNames: Record<UnitKey, { en: string; hy: string }> = {
@@ -21,5 +22,6 @@ export const UnitNames: Record<UnitKey, { en: string; hy: string }> = {
   [UnitKey.Kilogram]: { en: 'kg', hy: 'քլկ' },
   [UnitKey.Gram]: { en: 'g', hy: 'կրմ' },
   [UnitKey.Milliliter]: { en: 'ml', hy: 'մլ' },
-  [UnitKey.Clove]: { en: 'clove', hy: 'պճեղ' }
+  [UnitKey.Clove]: { en: 'clove', hy: 'պճեղ' },
+  [UnitKey.Times]: { en: '', hy: 'հատ' }
 };
