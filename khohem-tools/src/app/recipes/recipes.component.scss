@@ -1,46 +1,13 @@
 .page-wrapper {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 
-  .recipe-wrapper {
+  .recipes {
     display: flex;
-    width: 1080px;
-    height: 1350px;
-
-    transform: scale(0.4);
-    transform-origin: top left;
-
-    $left-part-width: 600px;
-    $title-height: 200px;
-    $image-wrapper-height: 200px;
-    .left-part {
-      width: $left-part-width;
-      .title-wrapper {
-        height: $title-height;
-      }
-      .image-wrapper {
-        height: $image-wrapper-height;
-        width: 100%;
-        align-content: center;
-        text-align: center;
-        .khohem-logo {
-          height: 80px;
-        }
-
-      }
-
-      .sections-wrapper {
-
-      }
+    .wrap {
+      width: 500px;
+      height: 600px;
     }
-
-    .right-part {
-      width: calc(100% - $left-part-width);
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      background-color: white;
-    }
-
   }
 }

@@ -13,7 +13,6 @@ export enum UnitKey {
 }
 
 export const UnitNames: Record<UnitKey, { en: string; hy: string }> = {
-  // [UnitKey.Gram]: { en: 'g', hy: 'գ' },
   [UnitKey.Tablespoon]: { en: 'tbsp', hy: 'ա. դգ' },
   [UnitKey.Teaspoon]: { en: 'tsp', hy: 'թ. դգ' },
   [UnitKey.Piece]: { en: 'piece', hy: 'հատ' },

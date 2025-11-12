@@ -13,6 +13,6 @@ import {ColorTemplateService} from '../../data-access/color-template.service';
 })
 export class RecipeSectionsDisplayer {
   recipeSections = input.required<RecipeSection[]>()
-  languageService = inject(LanguageService);
+  language = input.required<"hy" | "en">();
   colorTemplateService = inject(ColorTemplateService);
 }

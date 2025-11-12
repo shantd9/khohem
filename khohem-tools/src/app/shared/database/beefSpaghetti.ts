@@ -4,12 +4,10 @@ import {IngredientKey} from '../interfaces/ingredient';
 
 export const beefSpaghetti: Recipe = {
   title: "Beef Spaghetti",
-  titleHy: "Մսով Սպագետի",
+  titleHy: "Միսով Մագարոն",
   recipeImageUrl: "beefSpaghetti.png",
   sections: [
     {
-      // sectionTitle: '',
-      // sectionTitleHy: '',
       ingredients: [
         {quantity: "½", unit: UnitKey.Kilogram, ingredient: IngredientKey.N5Spaghetti},
         {quantity: "½", unit: UnitKey.Kilogram, ingredient: IngredientKey.BiftekMeat},
