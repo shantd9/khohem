@@ -2,18 +2,21 @@ import {Component, inject} from '@angular/core';
 import html2canvas from 'html2canvas';
 import {ColorTemplateService} from '../../data-access/color-template.service';
 import {ColorPickerComponent} from '../color-picker/color-picker';
+import {FormsModule} from '@angular/forms';
+import {EditService} from '../../services/edit.service';
 
 @Component({
   selector: 'app-action-buttons-wrapper',
   imports: [
-    ColorPickerComponent
+    ColorPickerComponent,
+    FormsModule
   ],
   templateUrl: './action-buttons-wrapper.html',
   styleUrl: './action-buttons-wrapper.scss'
 })
 export class ActionButtonsWrapper {
   colorTemplateService = inject(ColorTemplateService)
-
+  editService = inject(EditService)
   downloadAsJpg(languages: string[]) {
     //TODO improve this later.
     const elements = document.getElementsByClassName('recipe-wrapper');

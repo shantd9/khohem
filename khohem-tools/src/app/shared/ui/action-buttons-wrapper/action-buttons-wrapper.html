@@ -5,4 +5,5 @@
   <div>
      <app-color-picker (colorTemplateSelected)="colorTemplateService.setSelectedColorTemplate($event)"></app-color-picker>
   </div>
+  picture offset: <input [ngModel]="editService.pictureOffset()" type="number" (ngModelChange)="editService.pictureOffset.set($event)"/>
 </div>

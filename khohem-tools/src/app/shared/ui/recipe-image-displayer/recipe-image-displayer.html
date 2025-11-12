@@ -1,1 +1,1 @@
-<img src="{{ imageUrl }}" alt="Recipe Image" class="recipe-image">
+<img src="{{ imageUrl }}" alt="Recipe Image" class="recipe-image" [ngStyle]="{ 'left': editService.pictureOffset() + 'px'}">
