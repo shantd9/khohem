@@ -1,5 +1,5 @@
 @if (vm(); as vm) {
-  <div class="ingredients-wrapper">
+  <div class="ingredients-wrapper" [ngStyle]="{ 'gap': editService.gapBetweenItems() + 'px'}">
     @for (subItem of vm; track subItem) {
       <div class="ingredient">
         <div class="ingredient-unit-and-name" [ngStyle]="{ 'color': colorTemplateService.getUnitColor()}">

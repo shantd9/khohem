@@ -5,4 +5,5 @@ import { Injectable, signal } from "@angular/core";
 })
 export class EditService {
   pictureOffset = signal(0)
+  gapBetweenItems = signal(0)
 }

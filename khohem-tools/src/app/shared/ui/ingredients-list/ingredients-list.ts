@@ -4,6 +4,7 @@ import {IngredientNames} from '../../interfaces/ingredient';
 import {UnitNames} from '../../interfaces/unit';
 import {ColorTemplateService} from '../../data-access/color-template.service';
 import {NgStyle} from '@angular/common';
+import {EditService} from '../../services/edit.service';
 
 interface VmIngredient {
   name: string;      // The localized name
@@ -22,6 +23,7 @@ interface VmIngredient {
 export class IngredientsList {
   ingredients = input.required<Ingredient[]>();
   language = input.required<'en' | 'hy'>();
+  editService = inject(EditService);
   colorTemplateService = inject(ColorTemplateService);
 
   vm = computed<VmIngredient[]>(() => {
