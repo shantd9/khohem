@@ -42,7 +42,7 @@ export class ColorTemplateService {
       id: 4,
       titleColor: "#FADF70",
       sectionsColorEven: "#FDF4C4",
-      sectionsColorOdd: "#FFFFFF",
+      sectionsColorOdd: "#FDF4C4",
       sectionsTitleEven: "#000000",
       sectionsTitleOdd: "#000000",
       unitColor: "#FADF70",
@@ -52,13 +52,24 @@ export class ColorTemplateService {
     {
       id: 5,
       titleColor: "#AF2E84",
-      sectionsColorEven: "#FFFFFF",
-      sectionsColorOdd: "#FFFFFF",
-      sectionsTitleEven: "#FFFFFF",
-      sectionsTitleOdd: "#FFFFFF",
+      sectionsColorEven: "#9CA89F",
+      sectionsColorOdd: "#9CA89F",
+      sectionsTitleEven: "#AF2E84",
+      sectionsTitleOdd: "#AF2E84",
       unitColor: "#AF2E84",
       ingredientColor: "#5C4277",
       backgroundColor: "#CFE17F"
+    },
+    {
+      id: 6,
+      titleColor: "#3A4CC0",
+      sectionsColorEven: "#F7D283",
+      sectionsColorOdd: "#F5C96A",
+      sectionsTitleEven: "#2B2B2B",
+      sectionsTitleOdd: "#FFFFFF",
+      unitColor: "#3A4CC0",
+      ingredientColor: "#2B2B2B",
+      backgroundColor: "#FBE4A8"
     }
   ])
 

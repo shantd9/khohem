@@ -1,10 +1,9 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
 import {ActionButtonsWrapper} from '../shared/ui/action-buttons-wrapper/action-buttons-wrapper';
 import {Recipe} from '../shared/interfaces/recipe';
-import {LanguageService} from '../shared/data-access/language.service';
 import {ColorTemplateService} from '../shared/data-access/color-template.service';
-import {beefSpaghetti, sfouf} from '../shared/database';
 import {RecipeDisplayerComponent} from '../shared/ui/recipe-displayer/recipe-displayer.component';
+import {meatAndFatte} from '../shared/database/meatAndFatte';
 
 
 @Component({
@@ -18,10 +17,9 @@ import {RecipeDisplayerComponent} from '../shared/ui/recipe-displayer/recipe-dis
 })
 export default class RecipesComponent implements OnInit {
   recipe = signal<Recipe | null>(null);
-  languageService = inject(LanguageService)
   colorTemplateService = inject(ColorTemplateService)
 
   ngOnInit() {
-    this.recipe.update(() => beefSpaghetti);
+    this.recipe.update(() => meatAndFatte);
   }
 }

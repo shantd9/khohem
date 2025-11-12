@@ -47,6 +47,9 @@ export enum IngredientKey {
   SunflowerOil = 'sunflower_oil',
   Turmeric = 'turmeric',
   Anise = 'anise',
+  TahiniPaste = 'tahini_paste',
+  Chickpeas = 'chickpeas',
+  Cinnamon = 'cinnamon'
 }
 
 export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> = {
@@ -96,4 +99,7 @@ export const IngredientNames: Record<IngredientKey, { en: string; hy: string }> 
   [IngredientKey.SunflowerOil]: { en: 'sunflower oil', hy: 'արեւածաղիկի ձէթ' },
   [IngredientKey.Turmeric]: { en: 'turmeric', hy: 'քրքում (դեղին փոշի)' },
   [IngredientKey.Anise]: { en: 'anise', hy: 'փոշի անիսոն' },
+  [IngredientKey.TahiniPaste]: { en: 'tahini paste', hy: 'թահին' },
+  [IngredientKey.Chickpeas]: { en: 'chickpeas', hy: 'սիսեռ' },
+  [IngredientKey.Cinnamon]: { en: 'cinnamon', hy: 'կասիա' }
 };
